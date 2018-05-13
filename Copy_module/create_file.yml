@@ -1,0 +1,9 @@
+---
+ - hosts: app_servers_group
+   vars:
+     my_content: This is file is created using vars concept
+   tasks:
+   - name: This task is will transfer file from ansible admin client to it clients based hosts provided in host section
+     copy: 
+       dest: /tmp/client_file.txt
+       content: "{{my_content}}"
