@@ -1,0 +1,9 @@
+---
+ - hosts: your_group
+   tasks:
+   - name: This is using iteration
+     command: mkdir /tmp/"{{ item }}"
+     with_items:
+     - dir1
+     - dir2
+     - dir3
