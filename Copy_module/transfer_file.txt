@@ -1,0 +1,8 @@
+---
+ - hosts: app_servers_group
+   tasks:
+   - name: This task is will transfer file from ansible admin client to it clients based hosts provided in host section
+     copy: 
+        src: /tmp/adminfile.txt
+        dest: /tmp/client_file.txt
+        
