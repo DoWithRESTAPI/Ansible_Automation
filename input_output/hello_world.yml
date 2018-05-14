@@ -1,0 +1,41 @@
+---
+ - name: This is defalut debug play
+   hosts: localhost
+   tasks:
+   - name: This will print default debug messagd
+     debug:
+     
+     
+  
+ - name: This is first play
+   hosts: localhost
+   tasks:
+   - name: printing a hello world task
+     debug:
+      msg: "Hello, World !"
+      
+      
+ - name: This is second play
+   hosts: localhost
+   vars:
+     var1: "It is ansible playbook script with yaml"
+   tasks:
+   - name: printing vriable value
+     debug:
+      msg: "The variable value is: {{var1}}"
+    
+    
+ - hosts: localhost
+   tasks:
+   - debug:
+
+ - hosts: localhost
+   vars_prompt:
+     name: value
+     prompt: enter your value
+   tasks:
+   - debug:
+      msg: "hello {{value}}"
+
+
+      
