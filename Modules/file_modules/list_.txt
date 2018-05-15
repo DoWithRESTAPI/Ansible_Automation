@@ -1,0 +1,41 @@
+copy:
+
+
+file:
+
+
+
+stat:
+ supported arguments are:  checksum_algorithm, follow, get_attributes, get_checksum, get_md5, get_mime, path
+ 
+ usage of stat module:(for any task only)
+   - name: This task is to get file facts
+     stat: path=/tmp/demo.txt
+     or
+     stat:
+      path: /tmp/demo.txt
+     register: file_facts
+     
+   - name: This taks is to print above response
+     debug: msg="{{ file_facts }}"
+     or
+     debug:
+      msg: "{{ file_facts }}"
+      
+      
+example script: for stat and copy:
+
+
+---
+ - hosts: localhost
+   tasks:
+   - stat: path=/tmp/demo.txt
+     register: my_var
+   - debug:
+      msg: "{{ my_var }}"
+     when: my_var.stat.writeable==true
+   - set_fact: my_pat=/tmp/demo.txt
+   - copy:
+      dest: "{{my_pat}}"
+      content: "This isfrom copy"
+     when: my_var.stat.writeable==true
