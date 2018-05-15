@@ -1,0 +1,15 @@
+#This playbook will write content to the file if user is having the permmison to write
+---
+ - name: This is a play
+   hosts: localhost
+   tasks:
+    - stat: path=/tmp/demo.txt
+      register: demo_res
+    - debug:
+       msg: "User is having writable permission so we are going to write"
+      when: demo_res.stat.writeable==true
+
+    - copy:
+       dest: /tmp/demo.txt
+       content: "This info is from copy and when statement"
+      when: demo_res.stat.writeable==true
