@@ -1,0 +1,4 @@
+#!/bin/bash
+ssh-copy-id ansadmin@172.31.18.22
+ssh-copy-id ansadmin@172.31.19.55
+ssh-copy-id ansadmin@172.31.23.208

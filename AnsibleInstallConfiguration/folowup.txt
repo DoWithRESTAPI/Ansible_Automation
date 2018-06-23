@@ -1,0 +1,14 @@
+(Note: copy AWS PRIVATE KEY TO UR SCRITS LOCATION)
+script1: will create required number of server for Ansible setup
+	and also "create list_of_all_AnsController_and_AnsClient_ids.txt"
+
+script2: will provide ssh connectivity between server. (like: PasswordAuthentication yes,restart sshd service)
+
+copy ssh_key_gen.sh script to location
+script3: will create ssh-key pairs on AnsControlle server (check it its not working)
+
+Script4: create ssh-key pair exchange script (exch_key.sh)
+
+Script5: This will install ansible on anscontroller server
+
+script6: will copy some file to anscontroller
