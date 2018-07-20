@@ -2,6 +2,8 @@
  - name: This is defalut debug play
    hosts: localhost
    tasks:
+   - name: Hi
+     debug: 
    - name: This will print default debug messagd
      debug:
      
