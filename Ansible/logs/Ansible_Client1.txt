@@ -1,0 +1,16 @@
+032062890790	r-04d7608c3a3b36340
+INSTANCES	0	x86_64		False	xen	ami-011b3ccf1bd6db744	i-0076aef7480989ab6	t2.micro	ansible_key	2019-02-24T12:50:32.000Z	ip-172-31-89-9.ec2.internal	172.31.89.9	ec2-52-91-45-222.compute-1.amazonaws.com	52.91.45.222	/dev/sda1	ebs	True		subnet-093d5a27	hvm	vpc-f54aff8f
+CPUOPTIONS	1	1
+MONITORING	disabled
+NETWORKINTERFACES		12:78:6b:1d:61:50	eni-0a94ee97bd31a860a	032062890790	ip-172-31-89-9.ec2.internal	172.31.89.9	True	in-use	subnet-093d5a27	vpc-f54aff8f
+ASSOCIATION	amazon	ec2-52-91-45-222.compute-1.amazonaws.com	52.91.45.222
+ATTACHMENT	2019-02-24T12:50:32.000Z	eni-attach-09312e4675ed04b10	True	0	attaching
+GROUPS	sg-00fe30710bcfff987	DoWithPython
+PRIVATEIPADDRESSES	True	ip-172-31-89-9.ec2.internal	172.31.89.9
+ASSOCIATION	amazon	ec2-52-91-45-222.compute-1.amazonaws.com	52.91.45.222
+PLACEMENT	us-east-1b		default
+SECURITYGROUPS	sg-00fe30710bcfff987	DoWithPython
+STATE	0	pending
+STATEREASON	pending	pending
+TAGS	Name	Ansible_Node
+TAGS	Ansible	Node
